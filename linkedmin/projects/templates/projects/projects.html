@@ -8,7 +8,8 @@
 {% for project in projects %}
 
 <li>
-    Title: <a href="{% url 'project' project.id %}">{{project.title}}</a> --- {{project.created}}
+    Title: <a href="{% url 'project' project.id %}">{{project.title}}</a> --- {{project.created}} --- 
+    <a href="{% url 'update-project' project.id %}">Edit</a> --- <a href="{% url 'delete-project' project.id %}">Delete</a>
 </li>
 
 {% endfor %}
